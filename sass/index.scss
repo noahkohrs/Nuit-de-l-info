@@ -29,7 +29,8 @@ body {
     }
 
     .wallpaper {
-        background: url(/img/Vagues_sous_la_nuit.svg);
+        --img: url(/img/Vagues_sous_la_nuit.svg);
+        background: var(--img);
         background-size: cover;
         position: fixed;
         z-index: -11;
