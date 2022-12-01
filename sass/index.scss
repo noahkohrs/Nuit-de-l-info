@@ -1,8 +1,12 @@
+@use "acrylic.scss" as acrylic;
+
 body {
+    color: white;
     display:grid;
     margin:0;
     grid-row: 3;
     gap: 0;
+    font-family: sans-serif;
 
     grid-template-columns: auto min(100vw, 360px) auto;
     grid-template-rows: auto;
@@ -16,11 +20,12 @@ body {
         grid-template-columns: auto 800px auto;
     }
     
-    .centre { grid-column: 2; }
-
-    .story-container {
-        // margin-left: 25%;
-        //margin
+    .centre { 
+        grid-column: 2; 
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        padding: 1rem;
     }
 
     .wallpaper {
@@ -33,7 +38,40 @@ body {
         width: 100vw;
         background-position: center;
     }
+    .wrapper{
+        width: 100%;
+        height: 100%;
+        @include acrylic.acrylic;
+        border-radius: 1rem;
+        
+        .scoreboard{
+            display:grid;
+            justify-items: center;
+            align-items: center;
+            grid-template-columns: repeat(3, auto);
+            .score {
+            }
+            .chapiter {
+            }
+            .branch-unlocked {
+            }
+        }
+        .image-story {
+            display:grid;
+            margin-left: 5%;
+            margin-right: 5%;
+            justify-content: center;
+        }
+        
+        .story-container {
+            margin-top: 10%;
+        }
 
+        .boutons{
+            margin-top:20%;
+            text-align: center;
+        }
+    }
         
 
 }
