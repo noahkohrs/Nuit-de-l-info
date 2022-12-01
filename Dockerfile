@@ -8,6 +8,7 @@ COPY package.json /home/
 COPY tsconfig.json /home/
 COPY typescript /home/typescript/
 COPY sass /home/sass/
+COPY img /home/img/
 
 WORKDIR /home
 RUN npm install
