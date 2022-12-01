@@ -1,0 +1,82 @@
+@use "acrylic.scss" as acrylic;
+
+body {
+    color: white;
+    display:grid;
+    margin:0;
+    grid-row: 3;
+    gap: 0;
+    font-family: sans-serif;
+
+    grid-template-columns: auto min(100vw, 360px) auto;
+    grid-template-rows: auto;
+
+    @media screen and (min-width: 414px) { /* Tablette */
+        grid-template-columns: auto min(500px, 90vw) auto;
+        gap: 1rem;
+    }
+
+    @media screen and (min-width: 800px) { /* PC */
+        grid-template-columns: auto 800px auto;
+    }
+    
+    .centre { 
+        grid-column: 2; 
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        padding: 1rem;
+    }
+
+    .wallpaper {
+        background: url(/img/Vagues_sous_la_nuit.svg);
+        background-size: cover;
+        position: fixed;
+        z-index: -11;
+        pointer-events: none;
+        height: 100vh;
+        width: 100vw;
+        background-position: center;
+    }
+    .wrapper{
+        width: 100%;
+        height: 100%;
+        @include acrylic.acrylic;
+        border-radius: 1rem;
+        
+        .scoreboard{
+            display:grid;
+            justify-items: center;
+            align-items: center;
+            grid-template-columns: repeat(3, auto);
+            .score {
+            }
+            .chapiter {
+            }
+            .branch-unlocked {
+            }
+        }
+        .image-story {
+            display:grid;
+            margin-left: 5%;
+            margin-right: 5%;
+            justify-content: center;
+        }
+        
+        .story-container {
+            margin-top: 10%;
+        }
+
+        .boutons{
+            margin-top:20%;
+            text-align: center;
+        }
+    }
+        
+
+}
+div {
+    border: 1px solid;
+    border-color: green;
+    box-sizing: border-box;
+}
