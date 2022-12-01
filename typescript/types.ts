@@ -24,8 +24,8 @@ class Histoire {
         const new_chap: chapitre = this.get_chapitre(id_chap_suivant);
 
         //MAJ donnees personnage.
-        this.heros.branches_visitees.push(id_chap_suivant);
         this.heros.index_branche++;
+        this.heros.branches_visitees[this.heros.index_branche]=id_chap_suivant;
 
         if(new_chap.checkpoint) this.heros.index_dernier_checkpoint = this.heros.index_branche;
 
@@ -70,7 +70,8 @@ type chapitre = {
     titre: string;
     description: string;
     heure: string;
-    background_url: string;
+    nom_background: string;
+    nom_image: string;
     checkpoint: boolean;
     reponses: reponse[];
 };
