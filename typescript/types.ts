@@ -6,6 +6,7 @@ class Histoire {
     constructor(heros: personnage, chapitres: chapitre[], objets: objet[]){
         heros.index_branche = 0;
         heros.index_dernier_checkpoint = 0;
+        heros.max_alcool = 3; // coma ethylique : 3g.L
         
         this.heros = heros;
         this.chapitres = chapitres;
@@ -16,18 +17,35 @@ class Histoire {
         return this.chapitres.filter(e => id==e.id)[0];
     }
 
+    get_avancee(): number {
+        return Math.round((this.heros.index_branche/this.chapitres.length)*100);
+    }
+
+    get_alcool(): number {
+        return this.heros.niveau_alcool;
+    }
+
+    incremente_alcool(gramme: number): void {
+        this.heros.niveau_alcool += gramme;
+        if(this.heros.niveau_alcool < 0) this.heros.niveau_alcool = 0;
+        if(this.heros.niveau_alcool > this.heros.max_alcool) this.heros.niveau_alcool = this.heros.max_alcool;
+    }
+
     chapitre_suivant(reponse: number): chapitre {
         /** Retourne le chapitre suivant en fonction du choix de l'utilisateur */
         const chap_actuel: chapitre = this.get_chapitre(this.heros.branches_visitees[this.heros.index_branche]);
 
-        const id_chap_suivant: number = chap_actuel.reponses[reponse].chapitre_destination;
+        const rep = chap_actuel.reponses[reponse];
+        const id_chap_suivant: number = rep.chapitre_destination;
         const new_chap: chapitre = this.get_chapitre(id_chap_suivant);
+
+        this.incremente_alcool(-0.1); // Redescente de l'alcool.
 
         //MAJ donnees personnage.
         this.heros.index_branche++;
         this.heros.branches_visitees[this.heros.index_branche]=id_chap_suivant;
-
         if(new_chap.checkpoint) this.heros.index_dernier_checkpoint = this.heros.index_branche;
+        if(rep.augmente_alcool) this.incremente_alcool(0.25);
 
         return new_chap;
     };
@@ -44,6 +62,7 @@ type personnage = {
     inventaire: objet[];
     nom: string;
     niveau_alcool: number;
+    max_alcool: number;
     branches_visitees: number[]; // id des branches visites dans l'ordre de visite.
     index_branche: number;
     index_dernier_checkpoint: number; // position du dernier chapitre checkpoint dans branches_visitees.
@@ -63,6 +82,7 @@ type reponse = {
     max_alcool: number; // Pour etre affiche
     objets_requis: objet[]; // Pour l'afficher
     chapitre_destination: number; // id du chapitre
+    augmente_alcool: boolean; // True : augmente le taux d'alcool
 };
 
 type chapitre = {
