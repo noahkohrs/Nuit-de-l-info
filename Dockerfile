@@ -9,6 +9,7 @@ COPY tsconfig.json /home/
 COPY typescript /home/typescript/
 COPY sass /home/sass/
 COPY img /home/img/
+COPY data /home/data/
 
 WORKDIR /home
 RUN npm install

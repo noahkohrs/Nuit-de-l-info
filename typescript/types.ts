@@ -1,19 +1,18 @@
 export class Histoire {
-    chapitres: chapitre[];
-    facts: string[];
     heros: personnage;
 
-    constructor(){
-        this.chapitres = <chapitre[]>JSON.parse("../data/scenario.json");
-        this.facts = <string[]>JSON.parse("../data/facts.json");
+    constructor(private chapitres: chapitre[], private facts: string[]){
 
-        this.heros.branches_visitees = [];
-        this.heros.index_branche = 0;
-        this.heros.index_dernier_checkpoint = 0;
-        this.heros.niveau_alcool = 0;
-        this.heros.max_alcool = 3; // coma ethylique : 3g.L
-        this.heros.temps_parcours = 0;
-        this.heros.inventaire = [];
+        this.heros = {
+            branches_visitees: [],
+            index_branche: 0,
+            index_dernier_checkpoint: 0,
+            niveau_alcool: 0,
+            max_alcool: 3,
+            temps_parcours: 0,
+            inventaire: []
+        }
+
     };
 
     get_chapitre(id: number): chapitre {
@@ -66,7 +65,7 @@ export class Histoire {
 
 }
 
-type personnage = {
+export type personnage = {
     inventaire: objet[];
     niveau_alcool: number;
     max_alcool: number;
@@ -76,7 +75,7 @@ type personnage = {
     temps_parcours: number; // Temps de parcours depuis le debut de la game.
 }
 
-type objet = {
+export type objet = {
     nom: string;
     description: string;
     url: string;
@@ -92,7 +91,7 @@ type reponse = {
     augmente_alcool: boolean; // True : augmente le taux d'alcool
 };
 
-type chapitre = {
+export type chapitre = {
     id: number;
     titre: string;
     description: string;

@@ -1,5 +1,5 @@
 import { Wallpaper } from "./wallpaper.js";
-import { Histoire } from "./types.js";
+import { chapitre, Histoire } from "./types.js";
 
 console.log("🚁");
 
@@ -15,7 +15,15 @@ window.onload = async () => {
 
     // @ts-ignore
     window.wall = wall;
-    const histoire = new Histoire();
+
+    let reqChapitres = await fetch("/data/scenario.json");
+    let reqFacts = await fetch("/data/facts.json");
+    
+    let chapitres = <chapitre[]>JSON.parse(await reqChapitres.text());
+    let facts = <string[]>JSON.parse(await reqFacts.text());
+
+    const histoire = new Histoire(chapitres, facts);
+    console.dir(histoire)
     
     console.log(histoire.get_fact())
     
