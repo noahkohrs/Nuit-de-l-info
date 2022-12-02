@@ -11,8 +11,13 @@ window.onload = async () => {
 
     const wall = new Wallpaper(wpDiv);
     
-    wall.ajouteBG("Chapitre 1", "/img/Vagues_sous_la_nuit.svg");
-    wall.loadBG("Chapitre 1");
+    wall.ajouteBG("journee", "/img/bg/journee.svg");
+    wall.ajouteBG("matin", "/img/bg/matin.svg");
+    wall.ajouteBG("nuit", "/img/bg/nuit.svg");
+    wall.ajouteBG("soir", "/img/bg/soir.svg");
+    wall.ajouteBG("soiree", "/img/bg/soiree.svg");
+    
+    wall.loadBG("journee");
 
     // @ts-ignore
     window.wall = wall;
@@ -33,6 +38,6 @@ window.onload = async () => {
     let truc = <HTMLDivElement>document.querySelector(".wrapper");
     let truc2 = <HTMLDivElement>document.querySelector(".modal");
     // @ts-ignore
-    let iface = window.iface = new Interface(truc, histoire, truc2);
+    let iface = window.iface = new Interface(truc, histoire, wall, truc2);
 
 }

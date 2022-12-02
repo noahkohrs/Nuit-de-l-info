@@ -15,6 +15,4 @@ export const images: { [key: string]: string } = {
     "Canape": "img/Canape.jpg",
     "Couch": "img/Couch.jpg",
     "VotreChambre":"img/VotreChambre.jpg"
-    // Background Image
-
 }
