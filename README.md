@@ -1,16 +1,20 @@
-# Nuit de l'info 2022 - Les Reblochons
+# Nuit de L'info 2022 - Team Reblochons
 
-Ce repo contient la partie frontend de notre projet 
-ainsi qu'un Dockerfile permettant de l'afficher à l'aide de Nginx.
+## Introduction
 
-## Installation et utilisation du conteneur
+Ce document a pour objectif de décrire l'image docker mise en place pour la nuit de l'info par la team Reblochons.
 
-Ce conteneur ne permet pas le développement en son sein, c'est juste un truc statique 
-pour partager rapidement le front sans le back
+## Procédure d'installation de lancement du conteneur
 
-Pour build l'image, la commande c'est `docker build . -t reblochons/front`
+```bash
+docker pull baptistemht/reblochons-sans-sommeil
+docker run -d --name "reblochons" -p 80:80 baptistemht/reblochons-sans-sommeil
+```
 
-Pour la lancer, c'est `docker run -p 80:80 reblochons/front`,
-le site sera accessible sur `http://localhost:80`.
+__PS:__ Le port du conteneur est lié au port 80 de la machine.
 
-Pour ce qui est du développement direct dans Docker, on verra au prochain commit ;)
+## Liens supplémentaires
+
+Acceder à l'image depuis Docker Hub : https://hub.docker.com/r/baptistemht/reblochons-sans-sommeil
+
+__PS:__ La taille de l'image d'après `docker images` équivaut à `18Mo`.
