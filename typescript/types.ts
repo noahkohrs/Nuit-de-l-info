@@ -53,6 +53,7 @@ class Histoire {
     chapitre_precedent(): chapitre {
         /** Retourne le chapitre precedent par rapport a la position actuelle de l'utilisateur */
         this.heros.index_branche--;
+        this.incremente_alcool(0.1);
         return this.get_chapitre(this.heros.index_branche);
     }; // Retourne l'id du chapitre precedent
 
@@ -60,7 +61,6 @@ class Histoire {
 
 type personnage = {
     inventaire: objet[];
-    nom: string;
     niveau_alcool: number;
     max_alcool: number;
     branches_visitees: number[]; // id des branches visites dans l'ordre de visite.

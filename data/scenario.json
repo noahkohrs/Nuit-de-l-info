@@ -1,0 +1,19 @@
+[{
+    "id": 0,
+    "titre": "Titre",
+    "description": "Blabla",
+    "heure": "12h12",
+    "nom_background": "Titre bg",
+    "nom_image": "Titre image",
+    "checkpoint": true,
+    "reponses": [
+        {
+            "texte": "titre reponse 1",
+            "min_alcool": 0.2,
+            "max_alcool": 2,
+            "objets_requis": [],
+            "chapitre_destination": 1,
+            "augmente_alcool": true
+        }
+    ]
+}]
