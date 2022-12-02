@@ -1,19 +1,28 @@
 export class Histoire {
     heros: personnage;
 
-    constructor(private chapitres: chapitre[], private facts: string[], private desc_fin: string[]){
+    constructor(private chapitres: chapitre[], private facts: string[][], private desc_fin: string[][]){
 
-        this.heros = {
-            branches_visitees: [0],
-            index_branche: 0,
-            index_dernier_checkpoint: 0,
-            niveau_alcool: 0,
-            max_alcool: 3,
-            temps_parcours: 0,
-            inventaire: []
+        if(localStorage.getItem("mst.hero")){
+            this.heros = <personnage>JSON.parse(localStorage.getItem("mst.hero"));
+        }else {
+            this.heros = {
+                branches_visitees: [0],
+                index_branche: 0,
+                index_dernier_checkpoint: 0,
+                niveau_alcool: 0,
+                max_alcool: 3,
+                temps_parcours: 0
+            }
         }
 
+        
+
     };
+
+    dump(): void {
+        localStorage.setItem("mst.hero", JSON.stringify(this.heros));
+    }
 
     get_chapitre(id: number): chapitre {
         return this.chapitres.filter(e => id==e.id)[0];
@@ -64,17 +73,16 @@ export class Histoire {
     }; // Retourne l'id du chapitre precedent
 
     get_fact(): string {
-        return this.facts[Math.round(Math.random()*this.facts.length)][0];
+        return this.facts[Math.round(Math.random()*this.facts.length)][1];
     }
 
     get_texte_fin(): string {
-        return this.facts[0][0];
+        return this.desc_fin.filter(e => e[0]==this.get_chapitre(this.heros.branches_visitees[this.heros.index_branche]).titre)[0][1];
     }
 
 }
 
 export type personnage = {
-    inventaire: objet[];
     niveau_alcool: number;
     max_alcool: number;
     branches_visitees: number[]; // id des branches visites dans l'ordre de visite.
@@ -83,18 +91,10 @@ export type personnage = {
     temps_parcours: number; // Temps de parcours depuis le debut de la game.
 }
 
-export type objet = {
-    nom: string;
-    description: string;
-    url: string;
-    quantite: number;
-};
-
 type reponse = {
     texte: string;
     min_alcool: number; // Pour etre affiche
     max_alcool: number; // Pour etre affiche
-    objets_requis?: objet[]; // Pour l'afficher
     chapitre_destination: number; // id du chapitre
     augmente_alcool: boolean; // True : augmente le taux d'alcool
 };
