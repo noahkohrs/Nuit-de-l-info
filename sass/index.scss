@@ -8,7 +8,7 @@ body {
     gap: 0;
     font-family: sans-serif;
 
-    grid-template-columns: auto min(100vw, 360px) auto;
+    grid-template-columns: auto 100vw auto;
     grid-template-rows: max-content auto;
 
     .centre { 
@@ -18,10 +18,11 @@ body {
         height: 100vh;
     }
 
-    @media screen and (min-width: 414px) { /* Tablette */
-        grid-template-columns: auto min(500px, 90vw) auto;
+    @media screen and (min-width: 500px) { /* Tablette */
+        grid-template-columns: auto 500px auto;
         gap: 1rem;
         .centre { padding: 1rem; }
+        .wrapper { border-radius: 1rem; }
     }
 
     @media screen and (min-width: 800px) { /* PC */
@@ -43,14 +44,13 @@ body {
         width: 100%;
         height: 100%;
         @include acrylic.acrylic;
-        border-radius: 1rem;
         display: grid;
         overflow: hidden;
         grid-template-columns: auto;
-        grid-template-rows: max-content max-content auto;
+        grid-template-rows: max-content auto 48px;
 
         div {
-            border: 1px solid;
+            // border: 1px solid;
             border-color: green;
         }
 
@@ -70,52 +70,119 @@ body {
             .branch-unlocked {
                 margin-top: 5%;
                 margin-bottom: 5%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100%;
+                width: 100%;
+                .progress-bar__container {
+                    width: 80%;
+                    height: 2rem;
+                    border-radius: 2rem;
+                    position: relative;
+                    overflow: hidden;
+                    transition: all 0.5s;
+                    will-change: transform;
+                    box-shadow: 0 0 5px #e76f51;
+                  }
+                  
+                  .progress-bar {
+                    --progress: 10%;
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    content: "";
+                    background-color: #e76f51;
+                    top:0;
+                    bottom: 0;
+                    left: calc(var(--progress) - 100%);
+                    border-radius: inherit;
+                    display: flex;
+                    justify-content: center;
+                    align-items:center;
+                    color: white;
+                    font-family: sans-serif;
+                  }
             }
         }
 
-                
-        .story-teller {
-            height: 70%;
-            display: grid;
-            grid-template-columns: repeat(1, auto);
-            grid-template-rows: 30vh auto;
-            width: 100%;
-            .wi {
-                text-align: center;
-                max-width: 100%;
-                .image-story {
-                    border-radius: 5vh 5vh 0rem 0rem;
-                    max-width: 100%;
-                    // width: 80%;
+        .toutprendre{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+
+                .story-teller {
                     height: 100%;
-                    align-content: center;
-                    max-height: 50vh;
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    position: relative;
+                .wi {
+                    text-align: center;
+                    max-width: 100%;
+                    height: 100%;
+                    .image-story {
+                        border-radius: 0.5rem;
+                        max-width: 100%;
+                        // width: 80%;
+                        height: 100%;
+                        align-content: center;
+                        max-height: 50vh;
+                    }
+                }
+                
+                .text-story {
+                    max-width: 100%;
+                    @include acrylic.acrylic;
+                    // color: yellow;
+                    text-align: center;
+                    position: absolute;
+                    bottom: 50%;
+                    transform: translate(0, 50%);
+                    font-size: 14pt;
                 }
             }
+            
 
-            .text-story {
-                @include acrylic.acrylic;
-                color: yellow;
+            .sous-wrapper{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin-top: 0%;
+                height: 30vh;
                 text-align: center;
+                .option {
+                    width: 45%;
+                    margin: 2%;
+                    padding: 5px;
+                    height: 60px;
+                    background: #ffff;
+                    border-radius: 3rem;
+                    border: none;
+                    box-shadow: 0 0 5px 1px rgba($color: #000000, $alpha: 0.6);
+                    &:hover {
+                        transform: translate(-2px, -2px);
+                        box-shadow: 2px 2px 5px 1px rgba($color: #000000, $alpha: 0.6);
+                    }
+                    &:active {
+                        transform: translate(2px, 2px);
+                    }
+                    transition: ease 0.1s;
+                }
             }
         }
-        
+        .informations{
+            display: flex;
+            align-items: center;
+            padding: 2px 8px;
+            border-top: rgba($color: #FFFFFF, $alpha: 0.20) solid 1px;
+            p {
+                width: 100%;
+            }
+            .bInfo{
+                height: 100%;
+            }
 
-        .sous-wrapper{
-            display: grid;
-            grid-column: repeat(1,auto);
-            margin-top: 0%;
-            height: max;
-            text-align: center;
-            .option1{
-                color: crimson;
-            }
-            .option2{
-                color: saddlebrown;
-            }
-            .option3{
-                color: seagreen;
-            }
         }
 
     }
@@ -125,3 +192,12 @@ body {
 * { 
     box-sizing: border-box; 
 }
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+  }
+  
+  
