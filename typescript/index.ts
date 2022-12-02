@@ -1,4 +1,5 @@
 import { Wallpaper } from "./wallpaper.js";
+import { Histoire } from "./types.js";
 
 console.log("🚁");
 
@@ -14,5 +15,8 @@ window.onload = async () => {
 
     // @ts-ignore
     window.wall = wall;
-
+    const histoire = new Histoire();
+    
+    console.log(histoire.get_fact())
+    
 }

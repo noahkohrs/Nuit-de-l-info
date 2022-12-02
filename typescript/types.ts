@@ -1,16 +1,19 @@
-class Histoire {
-    objets: objet[];
+export class Histoire {
     chapitres: chapitre[];
+    facts: string[];
     heros: personnage;
 
-    constructor(heros: personnage, chapitres: chapitre[], objets: objet[]){
-        heros.index_branche = 0;
-        heros.index_dernier_checkpoint = 0;
-        heros.max_alcool = 3; // coma ethylique : 3g.L
-        
-        this.heros = heros;
-        this.chapitres = chapitres;
-        this.objets = objets;
+    constructor(){
+        this.chapitres = <chapitre[]>JSON.parse("../data/scenario.json");
+        this.facts = <string[]>JSON.parse("../data/facts.json");
+
+        this.heros.branches_visitees = [];
+        this.heros.index_branche = 0;
+        this.heros.index_dernier_checkpoint = 0;
+        this.heros.niveau_alcool = 0;
+        this.heros.max_alcool = 3; // coma ethylique : 3g.L
+        this.heros.temps_parcours = 0;
+        this.heros.inventaire = [];
     };
 
     get_chapitre(id: number): chapitre {
@@ -56,6 +59,10 @@ class Histoire {
         this.incremente_alcool(0.1);
         return this.get_chapitre(this.heros.index_branche);
     }; // Retourne l'id du chapitre precedent
+
+    get_fact(): string {
+        return this.facts[Math.round(Math.random()*this.facts.length)];
+    }
 
 }
 
