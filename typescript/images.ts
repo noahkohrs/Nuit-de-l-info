@@ -1,5 +1,6 @@
 export const images: { [key: string]: string } = {
     "Dance": "img/Dance.jpg",
+    "Danse": "img/Dance.jpg",
     "Arrivee": "img/Arrivee.jpg",
     "Bar": "img/Bar.jpg",
     "Chambre": "img/Chambre.jpg",

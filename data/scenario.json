@@ -85,7 +85,7 @@
 {
     "id": 4,
     "titre": "Au bar",
-    "description": "Vous allez au bar. Le barman vous demande ce que vous souhaitez commander.",
+    "description": "Vous allez au bar, la lumière est éblouissante et l'ambiance est sensationnelle. Le barman vous demande ce que vous souhaitez commander.",
     "heure": "20h10",
     "nom_background": "Titre bg",
     "nom_image": "Bar",
@@ -231,7 +231,7 @@
     "description": "Alors que vous dansez, vous avez un eye-contact. Une belle personne, dont le charme ne vous laisse pas du tout indifférent, surtout lorsqu'elle commence à danser à côté de vous, avec vous. Alors que les musiques s'enchaînent vos corps se rapprochent, vos mains se frôlent, vos regards s'allument...\nVous commencez à vous demander si vous ne voudriez pas aller plus loin, surout que votre partenaire ne semble pas du tout contre une proposition du genre.",
     "heure": "20h30",
     "nom_background": "Titre bg",
-    "nom_image": "Danse",
+    "nom_image": "Dance",
     "checkpoint": true,
     "reponses": [
         {
