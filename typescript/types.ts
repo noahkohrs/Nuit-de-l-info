@@ -1,10 +1,10 @@
 export class Histoire {
     heros: personnage;
 
-    constructor(private chapitres: chapitre[], private facts: string[]){
+    constructor(private chapitres: chapitre[], private facts: string[], private desc_fin: string[]){
 
         this.heros = {
-            branches_visitees: [],
+            branches_visitees: [0],
             index_branche: 0,
             index_dernier_checkpoint: 0,
             niveau_alcool: 0,
@@ -25,6 +25,10 @@ export class Histoire {
 
     get_alcool(): number {
         return this.heros.niveau_alcool;
+    }
+
+    est_fin(): boolean {
+        return this.get_chapitre(this.heros.branches_visitees[this.heros.index_branche]).reponses.length == 0;
     }
 
     incremente_alcool(gramme: number): void {
@@ -60,7 +64,11 @@ export class Histoire {
     }; // Retourne l'id du chapitre precedent
 
     get_fact(): string {
-        return this.facts[Math.round(Math.random()*this.facts.length)];
+        return this.facts[Math.round(Math.random()*this.facts.length)][0];
+    }
+
+    get_texte_fin(): string {
+        return this.facts[0][0];
     }
 
 }
@@ -86,7 +94,7 @@ type reponse = {
     texte: string;
     min_alcool: number; // Pour etre affiche
     max_alcool: number; // Pour etre affiche
-    objets_requis: objet[]; // Pour l'afficher
+    objets_requis?: objet[]; // Pour l'afficher
     chapitre_destination: number; // id du chapitre
     augmente_alcool: boolean; // True : augmente le taux d'alcool
 };

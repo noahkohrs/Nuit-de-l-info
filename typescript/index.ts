@@ -18,13 +18,11 @@ window.onload = async () => {
 
     let reqChapitres = await fetch("/data/scenario.json");
     let reqFacts = await fetch("/data/facts.json");
-    
+    let reqDesc = await fetch("/data/desc.json");
+
     let chapitres = <chapitre[]>JSON.parse(await reqChapitres.text());
     let facts = <string[]>JSON.parse(await reqFacts.text());
+    let desc_fin = <string[]>JSON.parse(await reqDesc.text());
 
-    const histoire = new Histoire(chapitres, facts);
-    console.dir(histoire)
-    
-    console.log(histoire.get_fact())
-    
+    const histoire = new Histoire(chapitres, facts, desc_fin);
 }

@@ -1,19 +1,78 @@
 [{
     "id": 0,
-    "titre": "Titre",
-    "description": "Blabla",
+    "titre": "Dans la chambre",
+    "description": "Vous êtes dans votre chambre. Ce soir, c'est soirée ! Une grande maison, des dizaines d'invités, l'alcool coule à flot ! Mais avant de partir, vous devez choisir l'objet à absolument emporter avec vous !",
     "heure": "12h12",
     "nom_background": "Titre bg",
     "nom_image": "Titre image",
     "checkpoint": true,
     "reponses": [
         {
-            "texte": "titre reponse 1",
+            "texte": "Prendre un protège-verre.",
+            "min_alcool": 0.2,
+            "max_alcool": 2,
+            "objets_requis": [],
+            "chapitre_destination": 1,
+            "augmente_alcool": false
+        },
+        {
+            "texte": "Prendre un préservatif.",
+            "min_alcool": 0.2,
+            "max_alcool": 2,
+            "objets_requis": [],
+            "chapitre_destination": 1,
+            "augmente_alcool": false
+        }
+    ]
+},
+
+
+
+{
+    "id": 1,
+    "titre": "Arrivée à la soirée",
+    "description": "Vous arrivez devant la maison de votre ami, dans le jardin, des gens discutent, certains fument, vous apercevez même un gars, ayant manifestement abusé de l'alcool, en train de vomir dans un buisson. La soirée s'annonce grandiose...",
+    "heure": "12h12",
+    "nom_background": "Titre bg",
+    "nom_image": "Titre image",
+    "checkpoint": true,
+    "reponses": [
+        {
+            "texte": "Vous entrez dans le salon",
+            "min_alcool": 0.2,
+            "max_alcool": 2,
+            "objets_requis": [],
+            "chapitre_destination": 2,
+            "augmente_alcool": false
+        }
+    ]
+},
+
+{
+    "id": 2,
+    "titre": "Entrée dans le salon",
+    "description": "Vous entrez et vous dirigez vers le salon, d'où se fait entendre de la techno d'assez basse qualité. Votre meilleur ami vous accueille, vous tendant un ecocup rempli de ce qu'il assure être de l'Icetea.",
+    "heure": "12h12",
+    "nom_background": "Titre bg",
+    "nom_image": "Titre image",
+    "checkpoint": true,
+    "reponses": [
+        {
+            "texte": "Vous  acceptez le verre.",
             "min_alcool": 0.2,
             "max_alcool": 2,
             "objets_requis": [],
             "chapitre_destination": 1,
             "augmente_alcool": true
+        },
+        {
+            "texte": "Vous refusez le verre.",
+            "min_alcool": 0.2,
+            "max_alcool": 2,
+            "objets_requis": [],
+            "chapitre_destination": 1,
+            "augmente_alcool": false
         }
     ]
-}]
+}
+]
