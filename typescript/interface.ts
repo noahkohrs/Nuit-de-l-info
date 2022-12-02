@@ -97,7 +97,7 @@ class Contenu {
                 let grammage = I.H.get_alcool();
                 if (r.min_alcool < grammage && r.max_alcool <= grammage) return;
                 return `<button class="option">${r.texte}</button>`
-            })}
+            }).join("")}
         </div>
         `;
 
