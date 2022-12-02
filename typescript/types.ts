@@ -1,5 +1,6 @@
 export class Histoire {
     heros: personnage;
+    heros_decouverte: boolean[];
 
     constructor(private chapitres: chapitre[], private facts: string[][], private desc_fin: string[][]){
 
@@ -16,12 +17,20 @@ export class Histoire {
             }
         }
 
-        
-
-    };
+        if(localStorage.getItem("mst.hero.decouverte")){
+            this.heros_decouverte = JSON.parse(localStorage.getItem("mst.hero.decouverte"));
+        }else{
+            this.heros_decouverte = [].fill(false,0,chapitres.length);
+        }
+   };
 
     dump(): void {
         localStorage.setItem("mst.hero", JSON.stringify(this.heros));
+        localStorage.setItem("mst.hero.decouverte", JSON.stringify(this.heros_decouverte));
+    }
+
+    get_premier_chapitre(): chapitre {
+        return this.get_chapitre(this.heros.branches_visitees[this.heros.index_branche]);
     }
 
     get_chapitre(id: number): chapitre {
@@ -29,7 +38,7 @@ export class Histoire {
     }
 
     get_avancee(): number {
-        return Math.round((this.heros.index_branche/this.chapitres.length)*100);
+        return Math.round((this.heros_decouverte.filter(e=>e).length/this.chapitres.length)*100);
     }
 
     get_alcool(): number {
@@ -37,7 +46,9 @@ export class Histoire {
     }
 
     est_fin(): boolean {
-        return this.get_chapitre(this.heros.branches_visitees[this.heros.index_branche]).reponses.length == 0;
+        let fin = this.get_chapitre(this.heros.branches_visitees[this.heros.index_branche]).reponses.length == 0;
+        if(fin) localStorage.setItem("mst.hero", null);
+        return fin;
     }
 
     incremente_alcool(gramme: number): void {
@@ -54,6 +65,8 @@ export class Histoire {
         const id_chap_suivant: number = rep.chapitre_destination;
         const new_chap: chapitre = this.get_chapitre(id_chap_suivant);
 
+        this.heros_decouverte[id_chap_suivant]=true;
+
         this.incremente_alcool(-0.1); // Redescente de l'alcool.
 
         //MAJ donnees personnage.
@@ -62,6 +75,8 @@ export class Histoire {
         if(new_chap.checkpoint) this.heros.index_dernier_checkpoint = this.heros.index_branche;
         if(rep.augmente_alcool) this.incremente_alcool(0.25);
 
+        this.dump();
+
         return new_chap;
     };
     
@@ -69,6 +84,7 @@ export class Histoire {
         /** Retourne le chapitre precedent par rapport a la position actuelle de l'utilisateur */
         this.heros.index_branche--;
         this.incremente_alcool(0.1);
+        this.dump();
         return this.get_chapitre(this.heros.index_branche);
     }; // Retourne l'id du chapitre precedent
 
