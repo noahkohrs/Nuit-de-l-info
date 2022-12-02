@@ -1,22 +1,14 @@
 [{
     "id": 0,
     "titre": "Dans votre chambre",
-    "description": "Vous êtes dans votre chambre. Ce soir, c'est soirée ! Une grande maison, des dizaines d'invités, l'alcool coule à flot ! Mais avant de partir, vous devez choisir l'objet à absolument emporter avec vous !",
+    "description": "Vous êtes dans votre chambre. Ce soir, c'est soirée ! Une grande maison, des dizaines d'invités, l'alcool coulera à flot !",
     "heure": "18h00",
     "nom_background": "Titre bg",
     "nom_image": "VotreChambre",
     "checkpoint": true,
     "reponses": [
         {
-            "texte": "Prendre un protège-verre.",
-            "min_alcool": 0.2,
-            "max_alcool": 2,
-            "objets_requis": [],
-            "chapitre_destination": 1,
-            "augmente_alcool": false
-        },
-        {
-            "texte": "Prendre un préservatif.",
+            "texte": "Aller à la soirée !",
             "min_alcool": 0.2,
             "max_alcool": 2,
             "objets_requis": [],
