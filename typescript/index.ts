@@ -17,21 +17,21 @@ window.onload = async () => {
     // @ts-ignore
     window.wall = wall;
 
+    // Histoire
+
     let reqChapitres = await fetch("/data/scenario.json");
     let reqFacts = await fetch("/data/facts.json");
-    
-    let chapitres = <chapitre[]>JSON.parse(await reqChapitres.text());
-    let facts = <string[]>JSON.parse(await reqFacts.text());
+    let reqDesc = await fetch("/data/desc.json");
 
-    const histoire = new Histoire(chapitres, facts);
-    console.dir(histoire)
-    
-    console.log(histoire.get_fact())
+
+    let chapitres = <chapitre[]>JSON.parse(await reqChapitres.text());
+    let facts = <string[][]>JSON.parse(await reqFacts.text());
+    let desc_fin = <string[][]>JSON.parse(await reqDesc.text());
+
+    const histoire = new Histoire(chapitres, facts, desc_fin);
 
     let truc = <HTMLDivElement>document.querySelector(".wrapper");
     // @ts-ignore
     let iface = window.iface = new Interface(truc, histoire);
 
-    
-    
 }
