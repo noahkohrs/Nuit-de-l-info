@@ -25,10 +25,24 @@ export class Interface {
         this.infoTitre = this.pied.querySelector("p")
         this.infoTexte = this.pied.querySelector(".texte")
         this.conteneur = wrapper.querySelector(".encoreunwrap")
-        this.content = new Contenu(H.get_chapitre(0), this);
+        let chap = H.get_premier_chapitre();
+        this.content = new Contenu(chap, this);
+        this.heureDiv.innerText = chap.heure;
 
+        this.affiche();
+        this.infoBtn.onclick = () => wrapper.classList.toggle("info");
+    }
+
+    /**
+     * Met à jour l'interface
+     */
+    affiche () {
         this.conteneur.append(this.content.elem);
+        this.wrapper.classList.toggle("info", false);
         let fact = this.H.get_fact();
+        this.infoTitre.innerText = `En savoir plus sur ${fact[0]}:`;
+        this.infoTexte.innerText = fact[1];
+        this.progressDiv.style.setProperty("--progress", this.H.get_avancee() + "%")
     }
 
     /**
@@ -38,8 +52,11 @@ export class Interface {
     click (n: number) {
         this.content.rm();
         let chap = this.H.chapitre_suivant(n);
-        this.content = new Contenu(chap, this);
-        this.conteneur.append(this.content.elem);
+        setTimeout(() => {
+            this.content = new Contenu(chap, this);
+            this.heureDiv.innerText = chap.heure;
+            this.affiche();
+        }, 600)
     }
 
 }
