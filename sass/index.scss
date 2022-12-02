@@ -84,7 +84,10 @@ body {
         grid-template-columns: auto;
         grid-template-rows: max-content auto 48px;
 
-        &.info { grid-template-rows: max-content auto max-content; }
+        &.info { 
+            grid-template-rows: max-content auto max-content; 
+            .bInfo { transform: rotate(180deg); }
+        }
 
         div {
             // border: 1px solid;
@@ -169,12 +172,12 @@ body {
                         // width: 80%;
                         height: 100%;
                         align-content: center;
-                        max-height: 50vh;
+                        max-height: 45vh;
                     }
                 }
                 
                 .text-story {
-                    padding: 0% 4%;
+                    padding: 0% 0%;
                     max-width: 100%;
                     @include acrylic.acrylic;
                     // color: yellow;
@@ -236,6 +239,9 @@ body {
                     height: 100%;
                     color: #FFFFFF;
                     font-weight: bold;
+                    background-color: transparent;
+                    border: none;
+                    font-size: 24pt;
                 }
             }
 
