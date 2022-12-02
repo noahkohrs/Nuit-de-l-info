@@ -17,4 +17,4 @@ __PS:__ Le port du conteneur est lié au port 80 de la machine.
 
 Acceder à l'image depuis Docker Hub : https://hub.docker.com/r/baptistemht/reblochons-sans-sommeil
 
-__PS:__ La taille de l'image d'après `docker images` équivaut à `18Mo`.
+__PS:__ La taille de l'image d'après `docker images` équivaut à `28Mo`.
