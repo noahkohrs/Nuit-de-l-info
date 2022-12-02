@@ -1,5 +1,6 @@
 import { Wallpaper } from "./wallpaper.js";
 import { chapitre, Histoire } from "./types.js";
+import { Interface } from "./interface.js";
 
 console.log("🚁");
 
@@ -26,5 +27,11 @@ window.onload = async () => {
     console.dir(histoire)
     
     console.log(histoire.get_fact())
+
+    let truc = <HTMLDivElement>document.querySelector(".wrapper");
+    // @ts-ignore
+    let iface = window.iface = new Interface(truc, histoire);
+
+    
     
 }
