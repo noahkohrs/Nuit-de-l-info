@@ -4,7 +4,7 @@
     "description": "Vous êtes dans votre chambre. Ce soir, c'est soirée ! Une grande maison, des dizaines d'invités, l'alcool coule à flot ! Mais avant de partir, vous devez choisir l'objet à absolument emporter avec vous !",
     "heure": "18h00",
     "nom_background": "Titre bg",
-    "nom_image": "Titre image",
+    "nom_image": "VotreChambre",
     "checkpoint": true,
     "reponses": [
         {
@@ -31,7 +31,7 @@
     "description": "Vous arrivez devant la maison de votre ami, dans le jardin, des gens discutent, certains fument, vous apercevez même un gars, ayant manifestement abusé de l'alcool, en train de vomir dans un buisson. La soirée s'annonce grandiose...",
     "heure": "20h00",
     "nom_background": "Titre bg",
-    "nom_image": "Titre image",
+    "nom_image": "Arrivee",
     "checkpoint": true,
     "reponses": [
         {
@@ -50,7 +50,7 @@
     "description": "Vous entrez et vous dirigez vers le salon, d'où se fait entendre de la techno d'assez basse qualité. Votre meilleur ami vous accueille, vous tendant un ecocup rempli de ce qu'il assure être de l'Icetea.",
     "heure": "20h05",
     "nom_background": "Titre bg",
-    "nom_image": "Titre image",
+    "nom_image": "Salon",
     "checkpoint": true,
     "reponses": [
         {
@@ -77,7 +77,7 @@
     "description": "Tout en vous dirigeant vers la piste de danse, vous goûtez le verre, et apparemment, il n'est pas rempli que d'IceTea. Le gout piquant de la vodka se mèle subtilement au breuvage. Néanmoins, cela ne vous empêchera pas de danser.",
     "heure": "20h08",
     "nom_background": "Titre bg",
-    "nom_image": "Titre image",
+    "nom_image": "Dance",
     "checkpoint": true,
     "reponses": [
         {
@@ -96,7 +96,7 @@
     "description": "Vous allez au bar. Le barman vous demande ce que vous souhaitez commander.",
     "heure": "20h10",
     "nom_background": "Titre bg",
-    "nom_image": "Titre image",
+    "nom_image": "Bar",
     "checkpoint": true,
     "reponses": [
         {
@@ -131,7 +131,7 @@
     "description": "Le rythme de la musique se glisse dans votre tête, entraînant votre corps. Vous commencez à danser, tranquillement égourdi par le son et les lumières qui vous martellent le crâne. Tandis que vous dansez, un mec trébuche et vous tombe dessus. Votre verre vacille et quelques gouttes s'en échappe. Le responsable ne semble pas s'en émouvoir, au contraire il prend son temps pour se rétablir, et vous colle de manière assez désagréable. Cela vous rappelle que vous êtes loin de connaître tout le monde dans cette soirée...",
     "heure": "20h15",
     "nom_background": "Titre bg",
-    "nom_image": "Titre image",
+    "nom_image": "Dance",
     "checkpoint": true,
     "reponses": [
         {
@@ -166,7 +166,7 @@
     "description": "D'un violent coup de coude vous renvoyez l'homme dans la foule dansante, en souhaitant secrètement qu'il se casse la figure. Cette mésaventure vous a saoulé, vous avez besoin d'aller vous poser. Vous rejoignez un groupe de gens posés sur un canapé dans une salle du rez-de-chaussée.",
     "heure": "20h18",
     "nom_background": "Titre bg",
-    "nom_image": "Titre image",
+    "nom_image": "Party",
     "checkpoint": true,
     "reponses": [
         {
@@ -185,7 +185,7 @@
     "description": "Posé dans le canapé, vous écoutez le groupe de gens, parler de leurs histoires de coeurs, et surtout de cul. Apparemment chacun a couché avec chacune, et les capotes étaient apparemment rarement de la partie.\n Une histoire vous trouble cependant, un drame. Deux homosexuels vivaient leur histoire d'amour au gré de la vie d'étudiant, mais l'un des deux était séropositif, et l'avait caché à son complice, pensant que la maladie ne pouvait se transmettre entre hommes. Grave erreur. Quand l'amant apprit qu'il été atteint du VIH, le couple vola en éclat. Sale histoire...\n La soirée avance, et l'ambiance dans la salle semble s'échauffer. Les corps se rapprochent, quelques baisers sauvages embrasent les libidos. Est-ce à cause de la moiteur ambiante, où de l'absence de relations sexuelles depuis 7 mois (3 jours et 6 heures...), mais vous n'êtes pas du tout indifférent à cette ambiance. Tout pourrait déraper d'un moment à l'autre...",
     "heure": "20h20",
     "nom_background": "Titre bg",
-    "nom_image": "Titre image",
+    "nom_image": "Canape",
     "checkpoint": true,
     "reponses": [
         {
@@ -212,7 +212,7 @@
     "description": "Alors que vous dansez au milieu de la piste, quelqu'un s'avance vers vous et vous propose un Shi Fu Bois, le principe du jeu est simple : un pierre-feuille-ciseaux. Le perdant boit.",
     "heure": "20h30",
     "nom_background": "Titre bg",
-    "nom_image": "Titre image",
+    "nom_image": "ShiFuBois",
     "checkpoint": true,
     "reponses": [
         {
@@ -239,7 +239,7 @@
     "description": "Alors que vous dansez, vous avez un eye-contact. Une belle personne, dont le charme ne vous laisse pas du tout indifférent, surtout lorsqu'elle commence à danser à côté de vous, avec vous. Alors que les musiques s'enchaînent vos corps se rapprochent, vos mains se frôlent, vos regards s'allument...\nVous commencez à vous demander si vous ne voudriez pas aller plus loin, surout que votre partenaire ne semble pas du tout contre une proposition du genre.",
     "heure": "20h30",
     "nom_background": "Titre bg",
-    "nom_image": "Titre image",
+    "nom_image": "Danse",
     "checkpoint": true,
     "reponses": [
         {
@@ -274,7 +274,7 @@
     "description": "Dehors, vous vous mêlez à un petit groupe de gens en train de chiller. La plupart fument, et sans doute pas des cigarettes classiques au vu de l'odeur.\nUne personne en particulier se détache du groupe, son physique vous attire, et cela semble réciproque.\nIl ne faudrait pas grand chose pour vous pousser à vous rapprocher d'elle...",
     "heure": "20h45",
     "nom_background": "Titre bg",
-    "nom_image": "Titre image",
+    "nom_image": "Dehors",
     "checkpoint": true,
     "reponses": [
         {
@@ -301,7 +301,7 @@
     "description": "Vous vous réveillez le lendemain matin, au milieu d'un couloir. Tout votre corps est douloureux, particulièrement votre anus. Tout se dont vous vous rappelez, c'est d'avoir perdu le Shi Fu Bois, et d'avoir cul sec le verre tendu devant vous. Une bien mauvaise idée...",
     "heure": "9:00",
     "nom_background": "Titre bg",
-    "nom_image": "Titre image",
+    "nom_image": "Couch",
     "checkpoint": true,
     "reponses": [
         {
@@ -320,7 +320,7 @@
     "description": "Vous vous réveillez le lendemain, lové dans votre couette, chez vous. La soirée d'hier était vraiment sympa. Vous vous rappelez ce baiser volé sur la dancefloor, cette douce caresse de vos lèvres avant que vous ne rentriez vous coucher. Malheureusement une mauvaise surprise vous attend dans le miroir : un magnifique bouton d'herpès trônant fièrement sur votre lèvre supérieure ! Ce baiser n'était peut-être pas une si bonne idée...",
     "heure": "9:00",
     "nom_background": "Titre bg",
-    "nom_image": "Titre image",
+    "nom_image": "Maladies",
     "checkpoint": true,
     "reponses": [
     ]
@@ -331,7 +331,7 @@
     "description": "Vous vous rapprochez des participants de ce qui s'annonce comme une sacrée partie de jambes en l'air. Rapidement vous vous retrouvez au milieu des corps nus. La pudeur vous empêche d'en dire plus, mais vous n'avez pu compter tous les trous par lesquels vous êtes passés...",
     "heure": "21h30",
     "nom_background": "Titre bg",
-    "nom_image": "Titre image",
+    "nom_image": "Couch",
     "checkpoint": true,
     "reponses": [
         {
@@ -350,7 +350,7 @@
     "description": "1 mois plus tard...\nVous peinez à vous remettre du traumatisme psychologique de cette soirée. De plus les tests ont révélé que vous êtes atteints d'une hépatite C.",
     "heure": "13:30",
     "nom_background": "Titre bg",
-    "nom_image": "Titre image",
+    "nom_image": "Maladies",
     "checkpoint": true,
     "reponses": [
     ]
@@ -361,7 +361,7 @@
     "description": "Un mois plus tard...\nUne nuit de plaisirs voluptueux, mais à quel prix ?\nQuelques jours après l'orgie, vous avez commencé à vous sentir gravement faible. Après un passage à l'hôpital, de honteuses explications, et un dépisatage, le verdict est tombé. Vous souffrez d'une hépatite E.\nSi seulement vous vous étiez protégés...",
     "heure": "13:30",
     "nom_background": "Titre bg",
-    "nom_image": "Titre image",
+    "nom_image": "Maladies",
     "checkpoint": true,
     "reponses": [
     ]
@@ -372,7 +372,7 @@
     "description": "Vous vous précipitez dans la première chambre inoccupée, à l'étage. Vous vous enlacez dans le lit, vous effeuillant maladroitement, vous êtes enivré par l'alcool.\nNus et collés contre votre partenaire, vous avez la présence d'esprit de sortir votre capote. Mais, complètement saoul, vous la déchirez lors de l'ouverture !",
     "heure": "22h00",
     "nom_background": "Titre bg",
-    "nom_image": "Titre image",
+    "nom_image": "Chambre",
     "checkpoint": true,
     "reponses": [
         {
@@ -407,7 +407,7 @@
     "description": "La première chambre inoccupée vous ouvre ses draps, et vous ne pardez pas à être totalement nus, prêts à aller plus loin !",
     "heure": "2h34",
     "nom_background": "Titre bg",
-    "nom_image": "Titre image",
+    "nom_image": "Chambre",
     "checkpoint": true,
     "reponses": [
         {
@@ -434,7 +434,7 @@
     "description": "Vous vous jetez dans une chambre et vous enlacés, avec l'envie ardente de faire l'amour ! Vous êtes tous les deux bien éméchés.\nVous vous apercevez que vous avez oublié votre capote...",
     "heure": "3h45",
     "nom_background": "Titre bg",
-    "nom_image": "Titre image",
+    "nom_image": "Chambre",
     "checkpoint": true,
     "reponses": [
         {
@@ -461,7 +461,7 @@
     "description": "Alors que la soirée avance, vous vous prenez à goûter les joints de vos nouveaux amis. C'est plutôt sympa, ça vous détend. Vous ne vous reconnaissez plus, vous vous sentez audacieux, une nouvelle personne !\nVos camarades semblent s'être lassés des joints. Vous les voyez sortir des seringues, se piquer le bras. Ils vous proposent d'essayer, vous promettant des sensations telles que vous n'en avez jamais connues !\nVous hésitez, conscient du fait que ces seringues contiennent des drogues dures. Mais qu'importe ! ce soir c'est la soirée ! Vous vous enfoncez la seringue dans le bras...",
     "heure": "4h58",
     "nom_background": "Titre bg",
-    "nom_image": "Titre image",
+    "nom_image": "Party",
     "checkpoint": true,
     "reponses": [
         {
@@ -480,7 +480,7 @@
     "description": "Par chance, votre partenaire dégaine prestement une capote, capote tout aussi prestement enfilée. La nuit seule sera témoin de ce qui s'ensuit...",
     "heure": "4h34",
     "nom_background": "Titre bg",
-    "nom_image": "Titre image",
+    "nom_image": "Chambre",
     "checkpoint": true,
     "reponses": [
         {
@@ -499,7 +499,7 @@
     "description": "Vous regrettez tellement cette maudite nuit ! Quelle idée d'avoir cédé à la tentation !\nDu sexe sans protection... Ca ne pouvait que mal finir ! Vous avez été testé positif à l'hépatite A !",
     "heure": "Un mois plus tard",
     "nom_background": "Titre bg",
-    "nom_image": "Titre image",
+    "nom_image": "Maladies",
     "checkpoint": true,
     "reponses": []
 },
@@ -509,7 +509,7 @@
     "description": "Le VIH... Le Sida... La maladie qui effraye tant. Vous l'avez attrapée. De plus, votre dépistage étant arrivé tardivement, vous êtes condamné à un lourd traitement à vie.\nVotre avenir ne sera plus jamais le même...",
     "heure": "Un mois plus tard",
     "nom_background": "Titre bg",
-    "nom_image": "Titre image",
+    "nom_image": "Maladies",
     "checkpoint": true,
     "reponses": []
 },
@@ -519,7 +519,7 @@
     "description": "Putain de seringue !\nPutain de soirée !\nTout ce qu'elle vous a apporté, c'est une infection à l'hépatite G !\nComment avez-vous pu laisser cette aiguille transporter votre peau ?",
     "heure": "Un mois plus tard",
     "nom_background": "Titre bg",
-    "nom_image": "Titre image",
+    "nom_image": "Maladies",
     "checkpoint": true,
     "reponses": []
 },
@@ -529,7 +529,7 @@
     "description": "Le sexe oral semble une bonne alternative à la pénétration. Après en avoir discuté avec votre partenaire, vous arrivez à une conclusion.",
     "heure": "3h06",
     "nom_background": "Titre bg",
-    "nom_image": "Titre image",
+    "nom_image": "Chambre",
     "checkpoint": true,
     "reponses": [
         {
@@ -556,7 +556,7 @@
     "description": "Un mois plus tard... \nLe goût du sexe de votre partenaire dans votre bouche, si doux au lendemain de la soirée, a depuis pris le goût amer des regrets.\nEn effet, suite à des symptômes tels que des fatigues et vomissements, vous vous êtes fait tester. Et le verdict est rude : l'hépatite D. \nSi seulement vous aviez su que le sexe oral peut être vecteur d'IST...",
     "heure": "Un mois plus tard...",
     "nom_background": "Titre bg",
-    "nom_image": "Titre image",
+    "nom_image": "Maladies",
     "checkpoint": true,
     "reponses": []
 },
@@ -566,7 +566,7 @@
     "description": "Finalement, c'était une bien bonne soirée ! Garder le contrôle est un bon moyen de s'éclater !",
     "heure": "11h17",
     "nom_background": "Titre bg",
-    "nom_image": "Titre image",
+    "nom_image": "Couch",
     "checkpoint": true,
     "reponses": []
 }]
