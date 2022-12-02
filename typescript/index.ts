@@ -10,7 +10,7 @@ window.onload = async () => {
 
     const wall = new Wallpaper(wpDiv);
     
-    wall.ajouteBG("Chapitre 1", "/img/Vagues_sous_la_nuit.svg", "/img/Soirée_étoile.svg", "/img/Vagues_sous_la_nuit.svg");
+    wall.ajouteBG("Chapitre 1", "/img/Vagues_sous_la_nuit.svg", "/img/blob.svg", "/img/Vagues_sous_la_nuit.svg");
     wall.loadBG("Chapitre 1");
 
     // @ts-ignore
