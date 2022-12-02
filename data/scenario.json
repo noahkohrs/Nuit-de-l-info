@@ -100,7 +100,7 @@
     "checkpoint": true,
     "reponses": [
         {
-            "texte": "Vous prenez un jus d'orange.",
+            "texte": "Vous prenez un jus d'orange et allez rejoindre des gens dans un salon.",
             "min_alcool": 0,
             "max_alcool": 2,
             "objets_requis": [],
@@ -108,7 +108,7 @@
             "augmente_alcool": false
         },
         {
-            "texte": "Vous prenez un verre de bière.",
+            "texte": "Vous prenez un verre de bière et allez danser.",
             "min_alcool": 0,
             "max_alcool": 2,
             "objets_requis": [],
@@ -116,7 +116,7 @@
             "augmente_alcool": true
         },
         {
-            "texte": "Vous prenez un verre de vodka-pomme.",
+            "texte": "Vous prenez un verre de vodka-pomme et allez dehors.",
             "min_alcool": 0,
             "max_alcool": 2,
             "objets_requis": [],
