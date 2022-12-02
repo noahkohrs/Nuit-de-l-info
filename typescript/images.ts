@@ -12,7 +12,8 @@ export const images: { [key: string]: string } = {
     "ShiFuBois": "img/ShiFuBois.jpg",
     "Party": "img/Party.jpg",
     "Canape": "img/Canape.jpg",
-    "Couch": "img/Couch.jpg"
+    "Couch": "img/Couch.jpg",
+    "VotreChambre":"img/VotreChambre.jpg"
     // Background Image
 
 }
