@@ -335,7 +335,7 @@
     "checkpoint": true,
     "reponses": [
         {
-            "texte": "",
+            "texte": "Vous rentrez chez vous.",
             "min_alcool": 0,
             "max_alcool": 2,
             "objets_requis": [],
