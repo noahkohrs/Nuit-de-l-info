@@ -88,8 +88,8 @@ export class Histoire {
         return this.get_chapitre(this.heros.index_branche);
     }; // Retourne l'id du chapitre precedent
 
-    get_fact(): string {
-        return this.facts[Math.round(Math.random()*this.facts.length)][1];
+    get_fact(): string[] {
+        return this.facts[~~(Math.random()*this.facts.length)];
     }
 
     get_texte_fin(): string {
