@@ -228,14 +228,14 @@
 {
     "id": 9,
     "titre": "Sur la piste de danse 2",
-    "description": "Alors que vous dansez, vous avez un eye-contact. Une belle personne, dont le charme ne vous laisse pas du tout indifférent, surtout lorsqu'elle commence à danser à côté de vous, avec vous. Alors que les musiques s'enchaînent vos corps se rapprochent, vos mains se frôlent, vos regards s'allument...\nVous commencez à vous demander si vous ne voudriez pas aller plus loin, surout que votre partenaire ne semble pas du tout contre une proposition du genre.",
+    "description": "Alors que vous dansez, vous avez un eye-contact. Une belle personne, dont le charme ne vous laisse pas du tout indifférent, surtout lorsqu'elle commence à danser à côté de vous, avec vous. Alors que les musiques s'enchaînent vos corps se rapprochent, vos mains se frôlent, vos regards s'allument...\nVous commencez à vous demander si vous ne voudriez pas aller plus loin, surtout que votre partenaire ne semble pas du tout contre une proposition du genre.",
     "heure": "20h30",
     "nom_background": "Titre bg",
     "nom_image": "Dance",
     "checkpoint": true,
     "reponses": [
         {
-            "texte": "Vous décidez de faire l'amour et buvez un grand verre de vodka pour vous donner du courage.",
+            "texte": "Vous décidez de faire l'amour et buvez cul sec votre vodka.",
             "min_alcool": 0,
             "max_alcool": 2,
             "objets_requis": [],
