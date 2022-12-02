@@ -7,3 +7,4 @@ COPY js /home/js/
 COPY css /home/css/
 COPY img /home/img/
 COPY data /home/data/
+COPY favicon.ico /home/
