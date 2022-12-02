@@ -11,7 +11,7 @@ window.onload = async () => {
 
     const wall = new Wallpaper(wpDiv);
     
-    wall.ajouteBG("Chapitre 1", "/img/Vagues_sous_la_nuit.svg", "/img/blob.svg", "/img/Vagues_sous_la_nuit.svg");
+    wall.ajouteBG("Chapitre 1", "/img/Vagues_sous_la_nuit.svg");
     wall.loadBG("Chapitre 1");
 
     // @ts-ignore
@@ -31,7 +31,8 @@ window.onload = async () => {
     const histoire = new Histoire(chapitres, facts, desc_fin);
 
     let truc = <HTMLDivElement>document.querySelector(".wrapper");
+    let truc2 = <HTMLDivElement>document.querySelector(".modal");
     // @ts-ignore
-    let iface = window.iface = new Interface(truc, histoire);
+    let iface = window.iface = new Interface(truc, histoire, truc2);
 
 }

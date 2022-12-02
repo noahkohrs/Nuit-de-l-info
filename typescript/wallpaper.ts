@@ -1,9 +1,9 @@
-export type WallpaperMode = 'clair' | 'sombre' | 'daltonien';
+// export type WallpaperMode = 'clair' | 'sombre' | 'daltonien';
 
 export class Wallpaper {
 
-    private backgrounds: {nom: string, sombre: string, clair: string, daltonien: string}[] = [];
-    private mode: WallpaperMode = 'clair';
+    private backgrounds: {nom: string, sombre: string}[] = [];
+    // private mode: WallpaperMode = 'clair';
     private bg: string;
 
     constructor(
@@ -19,14 +19,14 @@ export class Wallpaper {
      * @param clair url fond clair
      * @param daltonien url fond daltonien
      */
-    ajouteBG (nom: string, sombre: string, clair: string, daltonien: string) {
-        this.backgrounds.push({ nom, clair, sombre, daltonien });
+    ajouteBG (nom: string, sombre: string) {
+        this.backgrounds.push({ nom, sombre });
     }
 
     getBG (nom: string): string | undefined {
         let bg = this.backgrounds.filter(e => e.nom == nom)[0];
         if (!bg) return undefined;
-        return bg[this.mode];
+        return bg.sombre //[this.mode];
     }
 
     /**
@@ -46,9 +46,9 @@ export class Wallpaper {
      * Change le thème
      * @param mode Le mode
      */
-    changeMode (mode: WallpaperMode) {
-        this.mode = mode;
-        this.loadBG(this.bg);
-    }
+    // changeMode (mode: WallpaperMode) {
+    //     this.mode = mode;
+    //     this.loadBG(this.bg);
+    // }
 
 }

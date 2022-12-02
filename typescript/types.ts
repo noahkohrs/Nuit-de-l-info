@@ -47,7 +47,7 @@ export class Histoire {
 
     est_fin(): boolean {
         let fin = this.get_chapitre(this.heros.branches_visitees[this.heros.index_branche]).reponses.length == 0;
-        if(fin) localStorage.setItem("mst.hero", null);
+        if(fin) localStorage.setItem("mst.hero", "");
         return fin;
     }
 
@@ -93,7 +93,9 @@ export class Histoire {
     }
 
     get_texte_fin(): string {
-        return this.desc_fin.filter(e => e[0]==this.get_chapitre(this.heros.branches_visitees[this.heros.index_branche]).titre)[0][1];
+        let fin = this.desc_fin.filter(e => e[0]==this.get_chapitre(this.heros.branches_visitees[this.heros.index_branche]).titre)[0]
+        if (!fin) return "Rechargez le site pour découvir les autres pages ;)";
+        return fin[1];
     }
 
 }
