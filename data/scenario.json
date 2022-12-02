@@ -182,7 +182,7 @@
 {
     "id": 7,
     "titre": "Posé sur le canapé",
-    "description": "Posé dans le canapé, vous écoutez le groupe de gens, qui semblent bien se connaître, parler de leurs histoires de coeurs, et surtout de cul. Apparemment chacun a couché avec chacune, et cela ne semble déranger personne, bien que les capotes soient apparemment rarement de la partie.\n Une histoire vous trouble cependant, un drame estudiantin. 2 homosexuels vivotaient leur petite histoire d'amour au gré de la vie d'étudiant, mais l'un des deux était séropositif, et l'avait caché à son complice, pensant que la maladie ne pouvait se transmettre entre hommes. Grave erreur. Quand l'amant apprit qu'il été atteint du VIH, le couple vola en éclat. Sale histoire... L'ignorance peut parfois coûter bien cher. \n La soirée avance, et l'ambiance dans la salle semble s'échauffer. Les corps se rapprochent, quelques baisers sauvages embrasent les libidos. Est-ce à cause de la moiteur ambiante, où du fait que vous n'avez pas eu de relation sexuelle depuis 7 mois (3 jours et 6 heures...), mais vous n'êtes pas du tout indifférent à cette ambiance. Tout pourrait déraper d'un moment à l'autre...",
+    "description": "Posé dans le canapé, vous écoutez le groupe de gens, parler de leurs histoires de coeurs, et surtout de cul. Apparemment chacun a couché avec chacune, et les capotes étaient apparemment rarement de la partie.\n Une histoire vous trouble cependant, un drame. Deux homosexuels vivaient leur histoire d'amour au gré de la vie d'étudiant, mais l'un des deux était séropositif, et l'avait caché à son complice, pensant que la maladie ne pouvait se transmettre entre hommes. Grave erreur. Quand l'amant apprit qu'il été atteint du VIH, le couple vola en éclat. Sale histoire...\n La soirée avance, et l'ambiance dans la salle semble s'échauffer. Les corps se rapprochent, quelques baisers sauvages embrasent les libidos. Est-ce à cause de la moiteur ambiante, où de l'absence de relations sexuelles depuis 7 mois (3 jours et 6 heures...), mais vous n'êtes pas du tout indifférent à cette ambiance. Tout pourrait déraper d'un moment à l'autre...",
     "heure": "20h20",
     "nom_background": "Titre bg",
     "nom_image": "Titre image",
@@ -278,7 +278,7 @@
     "checkpoint": true,
     "reponses": [
         {
-            "texte": "D'un cul-sec vous finissez votre vodka avant de vous approcher d'elle.",
+            "texte": "D'un cul-sec vous finissez votre vodka en allant vers elle.",
             "min_alcool": 0,
             "max_alcool": 2,
             "objets_requis": [],
@@ -286,12 +286,12 @@
             "augmente_alcool": true
         },
         {
-            "texte": "Vous n'avez pas forcément envie de quoi que ce soit de sexuel, vous continuez à parler avec le groupe.",
+            "texte": "Vous continuez à parler avec le groupe.",
             "min_alcool": 0,
             "max_alcool": 2,
             "objets_requis": [],
             "chapitre_destination": 19,
-            "augmente_alcool": true
+            "augmente_alcool": false
         }
     ]
 },
@@ -305,7 +305,7 @@
     "checkpoint": true,
     "reponses": [
         {
-            "texte": "",
+            "texte": "Effaré, vous rentrez chez vous.",
             "min_alcool": 0,
             "max_alcool": 2,
             "objets_requis": [],
@@ -347,7 +347,7 @@
 {
     "id": 14,
     "titre": "hepatite C",
-    "description": "1 mois plus tard...\nVous peinez à vous remettre du traumatisme psychologique de cette soirée. De plus les tests ont révélé que vous êtes atteints d'une hépatite C.Vous avez perdu.",
+    "description": "1 mois plus tard...\nVous peinez à vous remettre du traumatisme psychologique de cette soirée. De plus les tests ont révélé que vous êtes atteints d'une hépatite C.",
     "heure": "13:30",
     "nom_background": "Titre bg",
     "nom_image": "Titre image",
