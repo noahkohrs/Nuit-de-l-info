@@ -46,7 +46,9 @@ export class Histoire {
     }
 
     est_fin(): boolean {
-        return this.get_chapitre(this.heros.branches_visitees[this.heros.index_branche]).reponses.length == 0;
+        let fin = this.get_chapitre(this.heros.branches_visitees[this.heros.index_branche]).reponses.length == 0;
+        if(fin) localStorage.setItem("mst.hero", null);
+        return fin;
     }
 
     incremente_alcool(gramme: number): void {
