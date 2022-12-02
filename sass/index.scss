@@ -49,6 +49,8 @@ body {
         grid-template-columns: auto;
         grid-template-rows: max-content auto 48px;
 
+        &.info { grid-template-rows: max-content auto max-content; }
+
         div {
             // border: 1px solid;
             border-color: green;
@@ -58,7 +60,7 @@ body {
             display:grid;
             justify-items:center;
             align-items: center;
-            grid-template-columns: repeat(3, auto);
+            grid-template-columns: 20%  auto 20%;
             .score {
                 margin-top: 5%;
                 margin-bottom: 5%;
@@ -107,9 +109,14 @@ body {
         }
 
         .toutprendre{
+            animation: transi_toutprendre 600ms ease-out;
             height: 100%;
             display: flex;
             flex-direction: column;
+
+            &.out {
+                animation: transi_toutprendre_out 600ms ease-out;
+            }
 
                 .story-teller {
                     height: 100%;
@@ -163,6 +170,7 @@ body {
                     &:hover {
                         transform: translate(-2px, -2px);
                         box-shadow: 2px 2px 5px 1px rgba($color: #000000, $alpha: 0.6);
+            
                     }
                     &:active {
                         transform: translate(2px, 2px);
@@ -170,17 +178,27 @@ body {
                     transition: ease 0.1s;
                 }
             }
+
         }
+        
         .informations{
             display: flex;
             align-items: center;
             padding: 2px 8px;
             border-top: rgba($color: #FFFFFF, $alpha: 0.20) solid 1px;
-            p {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            .ligne {
+                display: flex;
                 width: 100%;
-            }
-            .bInfo{
-                height: 100%;
+                &:first-of-type { height: 48px; }
+                p {
+                    width: 100%;
+                }
+                .bInfo{
+                    height: 100%;
+                }
             }
 
         }
@@ -200,4 +218,25 @@ body {
     width: 100%;
   }
   
-  
+  @keyframes transi_toutprendre {
+    from {
+        transform : translate(-50%);
+        opacity: 0;
+      }
+      to {
+        transform : translate(0%);
+        opacity: 1;
+      }
+  }
+
+  @keyframes transi_toutprendre_out {
+    to {
+        transform : translate(50%) scale(90%);
+        opacity: 0;
+      }
+      from {
+        transform : translate(0%) scale(100%);
+        opacity: 1;
+      }
+  }
+
